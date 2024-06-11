@@ -59,7 +59,7 @@ jobs:
           gem install bundler jekyll && \
           chmod -R 777 /opt/miniconda && \
           ln -s $CONDA_PREFIX/bin/bundle /bin/ && \
-          ln -s $CONDA_PREFIX/bin/jekyll /bin/ && \"
+          ln -s $CONDA_PREFIX/bin/jekyll /bin/"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
