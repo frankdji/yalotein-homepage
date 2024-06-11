@@ -16,7 +16,7 @@ jobs:
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        ruby:3.0 /bin/bash -c "
+        ubuntu:jammy /bin/bash -c "
         apt-get update && \
         apt-get install -y wget bzip2 python3-pip supervisor && \
         apt-get clean && \
