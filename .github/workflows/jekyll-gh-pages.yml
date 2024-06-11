@@ -26,8 +26,8 @@ jobs:
         export PATH='/opt/miniconda/bin:$PATH' && \
         conda init bash && \
         bash -c 'source ~/.bashrc && conda install -c conda-forge -c anaconda python=3.10 nodejs ruby' && \
-        /opt/miniconda/bin/gem install bundle jekyll && \
-        gem uninstall sass && \
+        /opt/miniconda/bin/gem install bundler jekyll && \
+        /opt/miniconda/bin/gem uninstall sass && \
         cd /srv/jekyll && \
-        bundle install && \
-        jekyll build --future"
+        /opt/miniconda/bin/bundle install && \
+        /opt/miniconda/bin/jekyll build --future"
