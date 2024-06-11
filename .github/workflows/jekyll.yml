@@ -56,8 +56,8 @@ jobs:
           export CC=$CONDA_PREFIX/bin/gcc && \
           export CXX=$CONDA_PREFIX/bin/g++ && \
           export LDFLAGS='-L$CONDA_PREFIX/lib -L$CONDA_PREFIX/lib64' && \
-          gem install bundler jekyll
-          chmod -R 777 /opt/miniconda
+          gem install bundler jekyll && \
+          chmod -R 777 /opt/miniconda && \
           ln -s $CONDA_PREFIX/bin/* /bin/"
       - name: Setup Pages
         id: pages
