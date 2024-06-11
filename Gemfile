@@ -1,6 +1,35 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "webrick", "~> 1.7"
-gen "sass", "-> 1.77.4"
-gem "jekyll", "~> 4.3"
-gem "jekyll-environment-variables"
+gem 'addressable', '2.8.6'
+gem 'bigdecimal', '3.1.8'
+gem 'colorator', '1.1.0'
+gem 'concurrent-ruby', '1.3.3'
+gem 'em-websocket', '0.5.3'
+gem 'eventmachine', '1.2.7'
+gem 'ffi', '1.17.0'
+gem 'forwardable-extended', '2.6.0'
+gem 'google-protobuf', '4.27.1'
+gem 'http_parser.rb', '0.8.0'
+gem 'i18n', '1.14.5'
+gem 'jekyll', '4.3.3'
+gem 'jekyll-environment-variables', '1.0.1'
+gem 'jekyll-sass-converter', '3.0.0'
+gem 'jekyll-watch', '2.2.1'
+gem 'kramdown', '2.4.0'
+gem 'kramdown-parser-gfm', '1.1.0'
+gem 'liquid', '4.0.4'
+gem 'listen', '3.9.0'
+gem 'mercenary', '0.4.0'
+gem 'pathutil', '0.16.2'
+gem 'public_suffix', '5.0.5'
+gem 'rake', '13.2.1'
+gem 'rb-fsevent', '0.11.2'
+gem 'rb-inotify', '0.11.1'
+gem 'rexml', '3.2.9'
+gem 'rouge', '4.2.1'
+gem 'safe_yaml', '1.0.5'
+gem 'sass-embedded', '1.77.4'
+gem 'terminal-table', '3.0.2'
+gem 'unicode-display_width', '2.5.0'
+gem 'webrick', '1.8.1'
+
