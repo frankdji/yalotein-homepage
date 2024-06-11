@@ -36,7 +36,7 @@ jobs:
       - name: Setup Ruby
         run: |
           sudo /bin/bash -c "
-          apt-get install ruby-full build-essential zlib1g-dev && \
+          apt-get install ruby-full build-essential zlib1g-dev" && \
           export GEM_HOME="$HOME/gems" && \
           export PATH="$HOME/gems/bin:$PATH" && \
           gem install jekyll bundler"
