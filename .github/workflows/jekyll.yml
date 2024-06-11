@@ -56,11 +56,7 @@ jobs:
           export CC=$CONDA_PREFIX/bin/gcc && \
           export CXX=$CONDA_PREFIX/bin/g++ && \
           export LDFLAGS='-L$CONDA_PREFIX/lib -L$CONDA_PREFIX/lib64' && \
-          gem install bundler jekyll && \
-          gem uninstall sass && \
-          cd /srv/jekyll && \
-          bundle install && \
-          jekyll build --future"
+          gem install bundler jekyll"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
