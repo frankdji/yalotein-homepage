@@ -12,21 +12,22 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build the site in the jekyll/builder container
+    - name: Build the site in the ruby container
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "
+        ruby:3.0 /bin/bash -c "
         apt-get update && \
         apt-get install -y wget bzip2 python3-pip supervisor && \
         apt-get clean && \
         wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda.sh && \
         bash /tmp/miniconda.sh -b -p /opt/miniconda && \
         rm /tmp/miniconda.sh && \
-        export PATH=\"/opt/miniconda/bin:\$PATH\" && \
+        export PATH='/opt/miniconda/bin:$PATH' && \
         conda init bash && \
-        bash -c \"source ~/.bashrc && conda install -c conda-forge -c anaconda python=3.10 nodejs ruby\" && \
+        bash -c 'source ~/.bashrc && conda install -c conda-forge -c anaconda python=3.10 nodejs ruby' && \
         /opt/miniconda/bin/gem install bundle jekyll && \
-        /opt/miniconda/bin/gem uninstall sass && \
-        /opt/miniconda/bin/bundle install && \
-        /opt/miniconda/bin/jekyll build --future"
+        gem uninstall sass && \
+        cd /srv/jekyll && \
+        bundle install && \
+        jekyll build --future"
