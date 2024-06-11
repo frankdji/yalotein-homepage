@@ -37,7 +37,7 @@ jobs:
         export CC=$CONDA_PREFIX/bin/gcc && \
         export CXX=$CONDA_PREFIX/bin/g++ && \
         export LDFLAGS='-L$CONDA_PREFIX/lib -L$CONDA_PREFIX/lib64' && \
-        /opt/miniconda/bin/gem install  && \
+        /opt/miniconda/bin/gem install bundler && \
         /opt/miniconda/bin/gem uninstall sass && \
         cd /srv/jekyll && \
         /opt/miniconda/bin/bundle install && \
