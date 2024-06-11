@@ -25,7 +25,7 @@ jobs:
         rm /tmp/miniconda.sh && \
         export PATH='/opt/miniconda/bin:$PATH' && \
         conda init bash && \
-        bash -c 'source ~/.bashrc && conda install -c conda-forge -c anaconda python=3.10  gcc=11.3 gcc_linux-64=11.3 gfortran=11.3  gxx=11.3 sysroot_linux-64=2.28 go cmake make automake autoconf glib expat libnetcdf zlib nodejs ruby' && \
+        bash -c 'source ~/.bashrc && conda install -c conda-forge -c anaconda python=3.10  gcc=11.3 gcc_linux-64=11.3 gfortran=11.3  gxx=11.3 sysroot_linux-64=2.28 go cmake make automake autoconf glib expat libnetcdf zlib nodejs ruby rb-jekyll' && \
         ln -s $CONDA_PREFIX/lib $CONDA_PREFIX/lib64 && \
         export CUDA_HOME=$CONDA_PREFIX && \
         export XLA_FLAGS=$CONDA_PREFIX && \
@@ -37,7 +37,7 @@ jobs:
         export CC=$CONDA_PREFIX/bin/gcc && \
         export CXX=$CONDA_PREFIX/bin/g++ && \
         export LDFLAGS='-L$CONDA_PREFIX/lib -L$CONDA_PREFIX/lib64' && \
-        /opt/miniconda/bin/gem install bundler jekyll && \
+        /opt/miniconda/bin/gem install  && \
         /opt/miniconda/bin/gem uninstall sass && \
         cd /srv/jekyll && \
         /opt/miniconda/bin/bundle install && \
